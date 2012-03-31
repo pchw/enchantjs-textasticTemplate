@@ -5,12 +5,12 @@
         {
             "name": "game.js",
             "fileExtension": "js",
-            "snippet": "enchant();\n\nwindow.onload = function(){\n\tvar game = new Game(320, 320);\n\tgame.fps = 30;\n\tgame.time = 0;\n\n\t// overwrite loading scene\n\tvar loadingScene = new Scene();\n\tloadingScene.backgroundColor = \"white\";\n\tloadingScene.addEventListener(Event.Event.PROGRESS, function(e){\n\t\tvar progress = parseInt(e.loaded / e.total);\n\t});\n\tgame.loadingScene = loadingScene;\n\n\tgame.onload = function(){\n\n\t};\n\n\tgame.addEventListener(Event.ENTER_FRAME, function(){\n\t\tgame.time = parseInt(game.frame/game.fps);\n\t});\n\n\tgame.start();\n};"
+            "snippet": "enchant();\n\nwindow.onload = function(){\n\tvar game = new Game(320, 320);\n\tgame.fps = 30;\n\tgame.time = 0;\n\n\t// overwrite loading scene\n\tvar loadingScene = new Scene();\n\tloadingScene.backgroundColor = \"white\";\n\tloadingScene.addEventListener(Event.PROGRESS, function(e){\n\t\tvar progress = parseInt(e.loaded / e.total);\n\t});\n\tgame.loadingScene = loadingScene;\n\n\tgame.onload = function(){\n\n\t};\n\n\tgame.addEventListener(Event.ENTER_FRAME, function(){\n\t\tgame.time = parseInt(game.frame/game.fps);\n\t});\n\n\tgame.start();\n};"
         },
         {
             "name": "html file(load game.js & enchant.js)",
             "fileExtension": "html",
-            "snippet": ""
+            "snippet": "<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, user-scalable=no\"> \n\t<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n\t<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n\t<meta name=\"format-detection\" content=\"telephone=no\" />\n\t<script type=\"text/javascript\" src=\"./enchant.js\"></script>\n\t<script type=\"text/javascript\" src=\"./main.js\"></script>\n\t<style type=\"text/css\">\n\t\tbody { margin: 0; padding: 0; }\n\t</style>\n</head>\n<body>\n</body>\n</html>"
         }
     ]
 }
