@@ -5,7 +5,7 @@
         {
             "name": "game.js",
             "fileExtension": "js",
-            "snippet": ""
+            "snippet": "enchant();\n\nwindow.onload = function(){\n\tvar game = new Game(320, 320);\n\tgame.fps = 30;\n\tgame.time = 0;\n\n\t// overwrite loading scene\n\tvar loadingScene = new Scene();\n\tloadingScene.backgroundColor = \"white\";\n\tloadingScene.addEventListener(Event.Event.PROGRESS, function(e){\n\t\tvar progress = parseInt(e.loaded / e.total);\n\t});\n\tgame.loadingScene = loadingScene;\n\n\tgame.onload = function(){\n\n\t};\n\n\tgame.addEventListener(Event.ENTER_FRAME, function(){\n\t\tgame.time = parseInt(game.frame/game.fps);\n\t});\n\n\tgame.start();\n};"
         },
         {
             "name": "html file(load game.js & enchant.js)",
