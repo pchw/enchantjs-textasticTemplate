@@ -1,0 +1,16 @@
+{
+    "uuid": "C5E966E2-EBEB-48ED-9480-8811BEF2E03D",
+    "category": "enchant.js",
+    "templates": [
+        {
+            "name": "game.js",
+            "fileExtension": "js",
+            "snippet": ""
+        },
+        {
+            "name": "html file(load game.js & enchant.js)",
+            "fileExtension": "html",
+            "snippet": ""
+        }
+    ]
+}
