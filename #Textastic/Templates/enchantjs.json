@@ -11,6 +11,16 @@
             "name": "html file(load game.js & enchant.js)",
             "fileExtension": "html",
             "snippet": "<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, user-scalable=no\"> \n\t<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n\t<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n\t<meta name=\"format-detection\" content=\"telephone=no\" />\n\t<script type=\"text/javascript\" src=\"./enchant.js\"></script>\n\t<script type=\"text/javascript\" src=\"./main.js\"></script>\n\t<style type=\"text/css\">\n\t\tbody { margin: 0; padding: 0; }\n\t</style>\n</head>\n<body>\n</body>\n</html>"
+        },
+        {
+            "name": "coffee-script template",
+            "fileExtension": "coffee",
+            "snippet": "enchant()\nwindow.onload = ->\n  game = new Game(320, 320)\n  game.fps = 30\n  game.time = 0\n  loadingScene = new Scene()\n  loadingScene.backgroundColor = \"white\"\n  loadingScene.addEventListener Event.PROGRESS, (e) ->\n    progress = parseInt(e.loaded / e.total)\n\n  game.loadingScene = loadingScene\n  game.onload = ->\n\n  game.addEventListener Event.ENTER_FRAME, ->\n    game.time = parseInt(game.frame / game.fps)\n\n  game.start()"
+        },
+        {
+            "name": "html file(load game.coffee & enchant.js)",
+            "fileExtension": "html",
+            "snippet": ""
         }
     ]
 }

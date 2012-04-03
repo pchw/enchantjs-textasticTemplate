@@ -1,4 +1,4 @@
-function enchantjsSnippet () {/*
+function jsSnippet () {/*
 enchant();
 
 window.onload = function(){
@@ -46,10 +46,31 @@ function htmlSnippet () {/*
 </html>
 */}
 
+function coffeeSnippet () {/*
+enchant()
+window.onload = ->
+  game = new Game(320, 320)
+  game.fps = 30
+  game.time = 0
+  loadingScene = new Scene()
+  loadingScene.backgroundColor = "white"
+  loadingScene.addEventListener Event.PROGRESS, (e) ->
+    progress = parseInt(e.loaded / e.total)
+
+  game.loadingScene = loadingScene
+  game.onload = ->
+
+  game.addEventListener Event.ENTER_FRAME, ->
+    game.time = parseInt(game.frame / game.fps)
+
+  game.start()
+*/}
+
 function formatHereDoc (str) {
 	return str.replace(/\t/g, "\\t").replace(/\"/g, "\\\"").split(/\n/).slice(1, -1).join("\\n");
 }
 
 
-console.log(formatHereDoc(enchantjsSnippet.toString()));
+console.log(formatHereDoc(jsSnippet.toString()));
 console.log(formatHereDoc(htmlSnippet.toString()));
+console.log(formatHereDoc(coffeeSnippet.toString()));
