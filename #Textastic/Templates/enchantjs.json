@@ -18,9 +18,9 @@
             "snippet": "enchant()\nwindow.onload = ->\n  game = new Game(320, 320)\n  game.fps = 30\n  game.time = 0\n  loadingScene = new Scene()\n  loadingScene.backgroundColor = \"white\"\n  loadingScene.addEventListener Event.PROGRESS, (e) ->\n    progress = parseInt(e.loaded / e.total)\n\n  game.loadingScene = loadingScene\n  game.onload = ->\n\n  game.addEventListener Event.ENTER_FRAME, ->\n    game.time = parseInt(game.frame / game.fps)\n\n  game.start()"
         },
         {
-            "name": "html file(load game.coffee & enchant.js)",
+            "name": "html file with coffee-script",
             "fileExtension": "html",
-            "snippet": ""
+            "snippet": "<!DOCTYPE HTML>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>title</title>\n<script src=\"./enchant.js\" type=\"text/javascript\" />\n<script src=\"http://jashkenas.github.com/coffee-script/extras/coffee-script.js\" type=\"text/javascript\" charset=\"utf-8\" />\n<script type=\"text/coffeescript\">\nenchant()\nwindow.onload = ->\n  game = new Game(320, 320)\n  game.fps = 30\n  game.time = 0\n  loadingScene = new Scene()\n  loadingScene.backgroundColor = \"white\"\n  loadingScene.addEventListener Event.PROGRESS, (e) ->\n    progress = parseInt(e.loaded / e.total)\n\n  game.loadingScene = loadingScene\n  game.onload = ->\n\n  game.addEventListener Event.ENTER_FRAME, ->\n    game.time = parseInt(game.frame / game.fps)\n\n  game.start()\n</script>\n</head>\n<body>\n</body>\n</html>"
         }
     ]
 }

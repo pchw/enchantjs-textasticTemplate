@@ -66,6 +66,39 @@ window.onload = ->
   game.start()
 */}
 
+function htmlwithcoffeeSnippet () {/*
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>title</title>
+<script src="./enchant.js" type="text/javascript" />
+<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js" type="text/javascript" charset="utf-8" />
+<script type="text/coffeescript">
+enchant()
+window.onload = ->
+  game = new Game(320, 320)
+  game.fps = 30
+  game.time = 0
+  loadingScene = new Scene()
+  loadingScene.backgroundColor = "white"
+  loadingScene.addEventListener Event.PROGRESS, (e) ->
+    progress = parseInt(e.loaded / e.total)
+
+  game.loadingScene = loadingScene
+  game.onload = ->
+
+  game.addEventListener Event.ENTER_FRAME, ->
+    game.time = parseInt(game.frame / game.fps)
+
+  game.start()
+</script>
+</head>
+<body>
+</body>
+</html>
+*/}
+
 function formatHereDoc (str) {
 	return str.replace(/\t/g, "\\t").replace(/\"/g, "\\\"").split(/\n/).slice(1, -1).join("\\n");
 }
@@ -74,3 +107,4 @@ function formatHereDoc (str) {
 console.log(formatHereDoc(jsSnippet.toString()));
 console.log(formatHereDoc(htmlSnippet.toString()));
 console.log(formatHereDoc(coffeeSnippet.toString()));
+console.log(formatHereDoc(htmlwithcoffeeSnippet.toString()));
