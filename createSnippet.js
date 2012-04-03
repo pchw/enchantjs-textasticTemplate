@@ -72,8 +72,8 @@ function htmlwithcoffeeSnippet () {/*
 <head>
 <meta charset="utf-8">
 <title>title</title>
-<script src="./enchant.js" type="text/javascript" />
-<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js" type="text/javascript" charset="utf-8" />
+<script src="./enchant.js" type="text/javascript"></script>
+<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/coffeescript">
 enchant()
 window.onload = ->
